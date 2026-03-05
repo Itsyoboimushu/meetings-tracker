@@ -444,74 +444,83 @@
 const URL_KEY = 'meetings_script_url';
 
 const SEED = [
-  {id:1,  name:"Usama",           status:"Upcoming",  date:"20-Feb-2026", time:"14:30", phone:"+923200115520", warmth:"",            daynote:"Friday",                           action:"Call WhatsApp",      notes:"ACCA Exams 9/13. ADP 2 years Bachelors in 2023. F1-F9 (Only F7 Attempted)", extra:"Need to send him list of unis in 12-14k range"},
+  {id:1,  name:"Usama",           status:"Upcoming",  date:"20-Feb-2026", time:"14:30", phone:"+923200115520", warmth:"",            daynote:"Friday",                           action:"Call WhatsApp",      notes:"ACCA Exams 9/13. ADP 2 years Bachelors in 2023. F1-F9 Only F7 Attempted", extra:"Need to send him list of unis in 12-14k range"},
   {id:2,  name:"Omer",            status:"Upcoming",  date:"20-Feb-2026", time:"15:00", phone:"+923117400576", warmth:"",            daynote:"Friday",                           action:"Call Zoom",          notes:"ACCA Exams, 1 left.", extra:""},
-  {id:3,  name:"M Aqib",          status:"Done",      date:"26-Feb-2026", time:"14:00", phone:"+923095204722", warmth:"",            daynote:"Thursday",                         action:"Meeting Done",       notes:"CA Student AFC Pass, FAR 1, CMA, MFA, BLAW, TX. ACCA Exemptions Law MA PM TX. Needs BT + FA CBE For Undergrad Advanced entry.", extra:"Meeting done. Follow up start of April. Wants year 3 entry BPP/USW."},
-  {id:4,  name:"Ali Hamza",       status:"Done",      date:"28-Feb-2026", time:"13:30", phone:"+923027291200", warmth:"",            daynote:"Saturday",                         action:"Meeting Done",       notes:"ACCA 3/13 AK. Year 2 Entry - BPP Brighton USW OBU Greenwich Brunel. ACCA Diploma in Accounting and Business RQF Level 4.", extra:"Requested virtual meet at 4pm. Send him list of documents."},
+  {id:3,  name:"M Aqib",          status:"Done",      date:"26-Feb-2026", time:"14:00", phone:"+923095204722", warmth:"",            daynote:"Thursday",                         action:"Meeting Done",       notes:"CA Student AFC Pass FAR 1 CMA MFA BLAW TX. ACCA Exemptions Law MA PM TX. Needs BT + FA CBE For Undergrad Advanced entry.", extra:"Meeting done. Follow up start of April. Wants year 3 entry BPP/USW."},
+  {id:4,  name:"Ali Hamza",       status:"Done",      date:"28-Feb-2026", time:"13:30", phone:"+923027291200", warmth:"",            daynote:"Saturday",                         action:"Meeting Done",       notes:"ACCA 3/13 AK. Year 2 Entry BPP Brighton USW OBU Greenwich Brunel. ACCA Diploma in Accounting and Business RQF Level 4.", extra:"Requested virtual meet at 4pm. Send him list of documents."},
   {id:5,  name:"Mumtaz",          status:"Upcoming",  date:"04-Mar-2026", time:"15:00", phone:"+923008800028", warmth:"Really Warm", daynote:"Wednesday",                        action:"Meeting Set",        notes:"ACCA 12/13 Straight to MSc. Brighton MMU Greenwich USW OBU.", extra:"Film hai ye banda - never comes to the appointment."},
-  {id:6,  name:"Awais",           status:"Follow Up", date:"04-Mar-2026", time:"TBD",   phone:"+923007777117", warmth:"Really Warm", daynote:"Follow up next week",              action:"Follow Up",          notes:"CA Inter, claims 7/9 AS ACCA. Primary interest EU but open to UK when given PR pathway.", extra:""},
+  {id:6,  name:"Awais",           status:"Follow Up", date:"04-Mar-2026", time:"TBD",   phone:"+923007777117", warmth:"Really Warm", daynote:"Follow up next week",              action:"Follow Up",          notes:"CA Inter claims 7/9 AS ACCA. Primary interest EU but open to UK when given PR pathway.", extra:""},
   {id:7,  name:"Abraiz",          status:"Follow Up", date:"06-Mar-2026", time:"TBD",   phone:"+923329488840", warmth:"Really Warm", daynote:"Exams til 6th March",              action:"Follow Up",          notes:"Really good lead. ACCA AK + LW. Wants Brighton MSc. Interested to visit office.", extra:"Follow up for meeting Wednesday 4th March."},
-  {id:8,  name:"Inam Farooq",     status:"Follow Up", date:"06-Mar-2026", time:"TBD",   phone:"+923034687878", warmth:"Medium",      daynote:"Interested Saturday",              action:"Follow Up on Friday",notes:"Hot lead. ACCA 6/13, doing articles, needs to give FA for year 3 entry.", extra:""},
+  {id:8,  name:"Inam Farooq",     status:"Follow Up", date:"06-Mar-2026", time:"TBD",   phone:"+923034687878", warmth:"Medium",      daynote:"Interested Saturday",              action:"Follow Up on Friday",notes:"Hot lead. ACCA 6/13 doing articles needs to give FA for year 3 entry.", extra:""},
   {id:9,  name:"Hammaad",         status:"Upcoming",  date:"07-Mar-2026", time:"12:00", phone:"+923043620600", warmth:"Very Hot",    daynote:"Saturday",                         action:"Meeting Set",        notes:"CA Inter done. ACCA 7/13. Year 3 entry.", extra:""},
   {id:10, name:"Anas",            status:"Upcoming",  date:"07-Mar-2026", time:"12:30", phone:"+923074192074", warmth:"Really Warm", daynote:"Saturday",                         action:"Meeting Set",        notes:"Very Interested. AK Cleared. Saturday meet.", extra:"Reminder on Friday - reconfirm meeting."},
   {id:11, name:"Ch Imran",        status:"Upcoming",  date:"07-Mar-2026", time:"14:00", phone:"+923025645009", warmth:"Very Hot",    daynote:"Saturday",                         action:"Meeting Set",        notes:"Lithuania, Masters Business Mgmt.", extra:"Must remind Friday."},
-  {id:12, name:"Adil",            status:"Follow Up", date:"10-Mar-2026", time:"TBD",   phone:"+923061119666", warmth:"Cold",        daynote:"Follow up 10th March",             action:"Follow Up",          notes:"Bcom 2yr Punjab Uni, CA. ACCA 4/13 LW exempt. All AK sat and passed.", extra:""},
+  {id:12, name:"Adil",            status:"Follow Up", date:"10-Mar-2026", time:"TBD",   phone:"+923061119666", warmth:"Cold",        daynote:"Follow up 10th March",             action:"Follow Up",          notes:"Bcom 2yr Punjab Uni CA. ACCA 4/13 LW exempt. All AK sat and passed.", extra:""},
   {id:13, name:"Raza Multan",     status:"Follow Up", date:"20-Mar-2026", time:"TBD",   phone:"+923128100721", warmth:"",            daynote:"Follow up 20th March",             action:"Follow Up",          notes:"ACCA 9/13.", extra:""},
-  {id:14, name:"M Adeel",         status:"Follow Up", date:"20-Mar-2026", time:"TBD",   phone:"+923054657683", warmth:"Really Warm", daynote:"Follow up 20th March",             action:"Follow Up",          notes:"CA Inter, wants to convert ACCA exemptions and go abroad. Very interested.", extra:""},
-  {id:15, name:"Abdul Rehman",    status:"Follow Up", date:"24-Feb-2026", time:"TBD",   phone:"+923079642082", warmth:"",            daynote:"Tuesday (past)",                   action:"Follow Up",          notes:"ACCA Start 2024. AK Done. AS 7/9. Most likely year 3 entry. In Lahore near Bahria.", extra:"Does not pick up."},
-  {id:16, name:"Mahad",           status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923368019599", warmth:"Really Warm", daynote:"After Ramadan - Islamabad",        action:"Follow Up",          notes:"Very genuine student. ACCA SBL and ATX all sat and passed. Wants to visit after Ramadan with a friend.", extra:""},
+  {id:14, name:"M Adeel",         status:"Follow Up", date:"20-Mar-2026", time:"TBD",   phone:"+923054657683", warmth:"Really Warm", daynote:"Follow up 20th March",             action:"Follow Up",          notes:"CA Inter wants to convert ACCA exemptions and go abroad. Very interested.", extra:""},
+  {id:15, name:"Abdul Rehman",    status:"Follow Up", date:"24-Feb-2026", time:"TBD",   phone:"+923079642082", warmth:"",            daynote:"Tuesday past",                     action:"Follow Up",          notes:"ACCA Start 2024. AK Done. AS 7/9. Most likely year 3 entry. In Lahore near Bahria.", extra:"Does not pick up."},
+  {id:16, name:"Mahad",           status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923368019599", warmth:"Really Warm", daynote:"After Ramadan Islamabad",          action:"Follow Up",          notes:"Very genuine student. ACCA SBL and ATX all sat and passed. Wants to visit after Ramadan with a friend.", extra:""},
   {id:17, name:"Tanvir",          status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923349915960", warmth:"Really Warm", daynote:"Wants to meet in person soon",     action:"Follow Up",          notes:"ACCA 9/13 through M.com exemptions but ACCA registration expired. Dropped WhatsApp message.", extra:"Follow up Friday 6th March for Saturday availability. Works in a bank weekdays busy."},
-  {id:18, name:"Umair Islamabad", status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923326888890", warmth:"Really Warm", daynote:"End of March or virtual",          action:"Follow Up",          notes:"AK all done. AS: PM FM FR LW. Wants a virtual meeting.", extra:""},
-  {id:19, name:"Laiba Shahid",    status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923074337200", warmth:"",            daynote:"After 5th March - has exams",      action:"Follow Up",          notes:"ACCA Applied Knowledge pass. FR in March. Open to visiting after 5th March. In Lahore.", extra:""},
-  {id:20, name:"Ghous Ali",       status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923074990005", warmth:"Really Warm", daynote:"Exam 5th March - follow up after", action:"Follow Up",          notes:"ACCA AS TX and LW Exempt. MSc. Very interested.", extra:""},
-  {id:21, name:"Ehtesham",        status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923024484422", warmth:"Warm",        daynote:"Genuine Student",                  action:"Follow Up",          notes:"CA Finalist, 3 exams left. MSc. Interested to meet. Dropped WhatsApp text.", extra:""},
-  {id:22, name:"Majid Mayo",      status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923020432954", warmth:"Hot",         daynote:"Must set appointment ASAP",        action:"Follow Up",          notes:"ACCA 8/13, just gave AA - results in April. Wants to go. Lives DHA Phase 5.", extra:"Must call today."}
+  {id:18, name:"Umair Islamabad", status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923326888890", warmth:"Really Warm", daynote:"End of March or virtual",          action:"Follow Up",          notes:"AK all done. AS PM FM FR LW. Wants a virtual meeting.", extra:""},
+  {id:19, name:"Laiba Shahid",    status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923074337200", warmth:"",            daynote:"After 5th March has exams",        action:"Follow Up",          notes:"ACCA Applied Knowledge pass. FR in March. Open to visiting after 5th March. In Lahore.", extra:""},
+  {id:20, name:"Ghous Ali",       status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923074990005", warmth:"Really Warm", daynote:"Exam 5th March follow up after",   action:"Follow Up",          notes:"ACCA AS TX and LW Exempt. MSc. Very interested.", extra:""},
+  {id:21, name:"Ehtesham",        status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923024484422", warmth:"Warm",        daynote:"Genuine Student",                  action:"Follow Up",          notes:"CA Finalist 3 exams left. MSc. Interested to meet. Dropped WhatsApp text.", extra:""},
+  {id:22, name:"Majid Mayo",      status:"Follow Up", date:"TBD",         time:"TBD",   phone:"+923020432954", warmth:"Hot",         daynote:"Must set appointment ASAP",        action:"Follow Up",          notes:"ACCA 8/13 just gave AA results in April. Wants to go. Lives DHA Phase 5.", extra:"Must call today."}
 ];
 
-// ── JSONP ─────────────────────────────────────────────────────────────────────
+// ── API using text/plain to bypass CORS preflight ─────────────────────────────
 function getScriptUrl() { return localStorage.getItem(URL_KEY) || ''; }
 function setScriptUrl(url) { localStorage.setItem(URL_KEY, url); }
 function loading(on) { document.getElementById('loadingBar').classList.toggle('active', on); }
 
-function jsonpCall(baseUrl, params) {
-  return new Promise(function(resolve, reject) {
-    var cbName = 'gcb' + Date.now();
-    var timer = setTimeout(function() { cleanup(); reject(new Error('Timeout')); }, 15000);
-    function cleanup() {
-      clearTimeout(timer);
-      delete window[cbName];
-      var el = document.getElementById(cbName);
-      if (el) el.parentNode.removeChild(el);
-    }
-    window[cbName] = function(data) { cleanup(); resolve(data); };
-    var src = baseUrl + '?callback=' + cbName;
-    Object.keys(params).forEach(function(k) {
-      var v = params[k];
-      src += '&' + k + '=' + encodeURIComponent(typeof v === 'object' ? JSON.stringify(v) : String(v));
-    });
-    var s = document.createElement('script');
-    s.id = cbName;
-    s.src = src;
-    s.onerror = function() { cleanup(); reject(new Error('Network error')); };
-    document.head.appendChild(s);
+function apiCall(action, data) {
+  var url = getScriptUrl();
+  if (!url) return Promise.resolve(null);
+  var params = 'action=' + encodeURIComponent(action);
+  if (data !== undefined) params += '&data=' + encodeURIComponent(JSON.stringify(data));
+  return fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain' },
+    body: params
+  }).then(function(r) { return r.text(); }).then(function(t) {
+    try { return JSON.parse(t); } catch(e) { return null; }
   });
 }
 
-async function loadData() {
+function apiGet(action, extraParams) {
   var url = getScriptUrl();
-  if (!url) return JSON.parse(JSON.stringify(SEED));
-  loading(true);
-  try {
-    var data = await jsonpCall(url, {action: 'getAll'});
-    loading(false);
-    return Array.isArray(data) ? data : [];
-  } catch(e) { loading(false); return []; }
+  if (!url) return Promise.resolve(null);
+  var qs = '?action=' + encodeURIComponent(action);
+  if (extraParams) {
+    Object.keys(extraParams).forEach(function(k) {
+      qs += '&' + k + '=' + encodeURIComponent(
+        typeof extraParams[k] === 'object' ? JSON.stringify(extraParams[k]) : String(extraParams[k])
+      );
+    });
+  }
+  return fetch(url + qs, {
+    method: 'GET',
+    redirect: 'follow'
+  }).then(function(r) { return r.text(); }).then(function(t) {
+    try { return JSON.parse(t); } catch(e) { return null; }
+  });
 }
 
-async function getNextId() {
-  var d = await loadData();
-  if (!d.length) return 1;
-  return Math.max.apply(null, d.map(function(x){ return Number(x.id)||0; })) + 1;
+function loadData() {
+  var url = getScriptUrl();
+  if (!url) return Promise.resolve(JSON.parse(JSON.stringify(SEED)));
+  loading(true);
+  return apiGet('getAll').then(function(data) {
+    loading(false);
+    return Array.isArray(data) ? data : [];
+  }).catch(function() { loading(false); return []; });
+}
+
+function getNextId() {
+  return loadData().then(function(d) {
+    if (!d.length) return 1;
+    return Math.max.apply(null, d.map(function(x){ return Number(x.id)||0; })) + 1;
+  });
 }
 
 function checkSetup() {
@@ -533,14 +542,17 @@ function connectSheet() {
   status.className = 'setup-status';
   status.textContent = 'Connecting...';
   loading(true);
-  jsonpCall(url, {action: 'getAll'}).then(function(data) {
+
+  // temporarily set url so apiGet works
+  localStorage.setItem(URL_KEY, url);
+
+  apiGet('getAll').then(function(data) {
     loading(false);
-    if (!Array.isArray(data)) throw new Error('Bad response');
-    setScriptUrl(url);
+    if (!Array.isArray(data)) throw new Error('bad');
     status.className = 'setup-status ok';
     if (data.length === 0) {
-      status.textContent = 'Connected! Loading your meetings into the sheet...';
-      return jsonpCall(url, {action: 'seed', meetings: SEED}).then(function() {
+      status.textContent = 'Connected! Loading your meetings into Google Sheets...';
+      return apiGet('seed', {data: SEED}).then(function() {
         status.textContent = 'Done! ' + SEED.length + ' meetings loaded into Google Sheets.';
         document.getElementById('setupBanner').classList.add('hidden');
         renderAll();
@@ -550,10 +562,11 @@ function connectSheet() {
       document.getElementById('setupBanner').classList.add('hidden');
       renderAll();
     }
-  }).catch(function() {
+  }).catch(function(e) {
     loading(false);
+    localStorage.removeItem(URL_KEY);
     status.className = 'setup-status err';
-    status.textContent = 'Could not connect. Make sure you created a NEW deployment with access set to Anyone.';
+    status.textContent = 'Could not connect. Make sure you deployed as a NEW deployment with access set to Anyone.';
   });
 }
 
@@ -571,48 +584,40 @@ function getFilter() { return document.getElementById('searchInput').value.toLow
 function filtered(arr) {
   var q = getFilter(); if (!q) return arr;
   return arr.filter(function(m) {
-    return (m.name+m.notes+m.extra+m.daynote).toLowerCase().indexOf(q) > -1;
+    return (String(m.name)+String(m.notes)+String(m.extra)+String(m.daynote)).toLowerCase().indexOf(q) > -1;
   });
 }
-
 function rowActions(id, status) {
-  var btns = '';
+  var b = '';
   if (status === 'Upcoming') {
-    btns += '<button class="btn-move" data-id="'+id+'" data-action="moveDone">Done</button>';
-    btns += '<button class="btn-move" data-id="'+id+'" data-action="moveFollowUp">Follow Up</button>';
+    b += '<button class="btn-move" data-id="'+id+'" data-mv="Done">Done</button>';
+    b += '<button class="btn-move" data-id="'+id+'" data-mv="Follow Up">Follow Up</button>';
   } else if (status === 'Follow Up') {
-    btns += '<button class="btn-move" data-id="'+id+'" data-action="moveUpcoming">Schedule</button>';
-    btns += '<button class="btn-move" data-id="'+id+'" data-action="moveDone">Done</button>';
+    b += '<button class="btn-move" data-id="'+id+'" data-mv="Upcoming">Schedule</button>';
+    b += '<button class="btn-move" data-id="'+id+'" data-mv="Done">Done</button>';
   } else {
-    btns += '<button class="btn-move" data-id="'+id+'" data-action="moveFollowUp">Re-open</button>';
+    b += '<button class="btn-move" data-id="'+id+'" data-mv="Follow Up">Re-open</button>';
   }
-  btns += '<button class="btn-delete" data-id="'+id+'" data-action="del" title="Delete">🗑</button>';
-  return btns;
+  b += '<button class="btn-delete" data-id="'+id+'" data-del="1" title="Delete">🗑</button>';
+  return b;
 }
-
 function renderUpcoming(data) {
   var rows = filtered(data.filter(function(m){ return m.status==='Upcoming'; }));
   var tb = document.getElementById('tbody-upcoming');
   if (!rows.length) { tb.innerHTML='<tr><td colspan="9"><div class="empty-state"><div class="empty-icon">📅</div><div class="empty-text">No upcoming meetings</div></div></td></tr>'; return; }
-  tb.innerHTML = rows.map(function(m,i){
-    return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date">'+(m.date||'TBD')+'</td><td class="td-time">'+(m.time||'TBD')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td>'+warmthPill(m.warmth)+'</td><td class="td-notes">'+esc(m.notes)+'</td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Upcoming')+'</td></tr>';
-  }).join('');
+  tb.innerHTML = rows.map(function(m,i){ return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date">'+(m.date||'TBD')+'</td><td class="td-time">'+(m.time||'TBD')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td>'+warmthPill(m.warmth)+'</td><td class="td-notes">'+esc(m.notes)+'</td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Upcoming')+'</td></tr>'; }).join('');
 }
 function renderFollowup(data) {
   var rows = filtered(data.filter(function(m){ return m.status==='Follow Up'; }));
   var tb = document.getElementById('tbody-followup');
   if (!rows.length) { tb.innerHTML='<tr><td colspan="9"><div class="empty-state"><div class="empty-icon">🔔</div><div class="empty-text">No follow-ups pending</div></div></td></tr>'; return; }
-  tb.innerHTML = rows.map(function(m,i){
-    return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date" style="color:var(--amber)">'+esc(m.daynote||m.date||'TBD')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td>'+warmthPill(m.warmth)+'</td><td class="td-notes">'+esc(m.notes)+'</td><td><span class="action-pill">'+esc(m.action)+'</span></td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Follow Up')+'</td></tr>';
-  }).join('');
+  tb.innerHTML = rows.map(function(m,i){ return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date" style="color:var(--amber)">'+esc(m.daynote||m.date||'TBD')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td>'+warmthPill(m.warmth)+'</td><td class="td-notes">'+esc(m.notes)+'</td><td><span class="action-pill">'+esc(m.action)+'</span></td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Follow Up')+'</td></tr>'; }).join('');
 }
 function renderDone(data) {
   var rows = filtered(data.filter(function(m){ return m.status==='Done'; }));
   var tb = document.getElementById('tbody-done');
   if (!rows.length) { tb.innerHTML='<tr><td colspan="8"><div class="empty-state"><div class="empty-icon">✅</div><div class="empty-text">No completed meetings yet</div></div></td></tr>'; return; }
-  tb.innerHTML = rows.map(function(m,i){
-    return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date" style="color:var(--green)">'+(m.date||'—')+'</td><td class="td-time">'+(m.time||'—')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td class="td-notes">'+esc(m.notes)+'</td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Done')+'</td></tr>';
-  }).join('');
+  tb.innerHTML = rows.map(function(m,i){ return '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td><b>'+esc(m.name)+'</b></td><td class="td-date" style="color:var(--green)">'+(m.date||'—')+'</td><td class="td-time">'+(m.time||'—')+'</td><td class="td-phone">'+(m.phone||'')+'</td><td class="td-notes">'+esc(m.notes)+'</td><td class="td-extra">'+esc(m.extra)+'</td><td>'+rowActions(m.id,'Done')+'</td></tr>'; }).join('');
 }
 function updateStats(data) {
   var u=data.filter(function(m){return m.status==='Upcoming';}).length;
@@ -632,29 +637,36 @@ function renderAll() {
   });
 }
 
-// ── EVENT DELEGATION (no inline onclick with quotes) ──────────────────────────
+// ── EVENT DELEGATION ──────────────────────────────────────────────────────────
 document.addEventListener('click', function(e) {
-  var btn = e.target.closest('[data-action]');
-  if (!btn) return;
-  var action = btn.dataset.action;
-  var id = btn.dataset.id;
   var url = getScriptUrl();
-  if (!url) return;
 
-  var statusMap = {moveDone:'Done', moveFollowUp:'Follow Up', moveUpcoming:'Upcoming'};
+  // Tab switching
+  var tabBtn = e.target.closest('[data-tab-btn]');
+  if (tabBtn) { switchTab(tabBtn.dataset.tabBtn); return; }
 
-  if (action === 'del') {
-    if (!confirm('Delete this meeting?')) return;
-    loading(true);
-    jsonpCall(url, {action:'delete', id:String(id)}).then(function(){ loading(false); renderAll(); });
-  } else if (statusMap[action]) {
+  // Move status
+  var mvBtn = e.target.closest('[data-mv]');
+  if (mvBtn && url) {
+    var id = mvBtn.dataset.id;
+    var newStatus = mvBtn.dataset.mv;
     loading(true);
     loadData().then(function(data) {
       var m = data.find(function(x){ return String(x.id)===String(id); });
       if (!m) { loading(false); return; }
-      m.status = statusMap[action];
-      return jsonpCall(url, {action:'update', meeting:m});
+      m.status = newStatus;
+      return apiGet('update', {data: m});
     }).then(function(){ loading(false); renderAll(); });
+    return;
+  }
+
+  // Delete
+  var delBtn = e.target.closest('[data-del]');
+  if (delBtn && url) {
+    if (!confirm('Delete this meeting?')) return;
+    loading(true);
+    apiGet('delete', {id: delBtn.dataset.id}).then(function(){ loading(false); renderAll(); });
+    return;
   }
 });
 
@@ -668,13 +680,12 @@ function openModal() {
   document.getElementById('modalOverlay').classList.add('open');
 }
 function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
-function closeOnBg(e) { if (e.target===document.getElementById('modalOverlay')) closeModal(); }
+function closeOnBg(e) { if(e.target===document.getElementById('modalOverlay')) closeModal(); }
 
 function saveMeeting() {
   var name = document.getElementById('f-name').value.trim();
   if (!name) { alert('Please enter a name.'); return; }
-  var url = getScriptUrl();
-  if (!url) { alert('Please connect to Google Sheets first.'); return; }
+  if (!getScriptUrl()) { alert('Please connect to Google Sheets first.'); return; }
   getNextId().then(function(newId) {
     var meeting = {
       id: newId, name: name,
@@ -689,9 +700,8 @@ function saveMeeting() {
       extra:   document.getElementById('f-extra').value.trim()
     };
     loading(true);
-    return jsonpCall(url, {action:'save', meeting:meeting}).then(function(){
-      loading(false);
-      closeModal();
+    return apiGet('save', {data: meeting}).then(function(){
+      loading(false); closeModal();
       switchTab(meeting.status==='Upcoming'?'upcoming':meeting.status==='Done'?'done':'followup');
       renderAll();
     });
@@ -705,15 +715,9 @@ function switchTab(name) {
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────────
-document.addEventListener('click', function(e2) {
-  var tabBtn = e2.target.closest('[data-tab-btn]');
-  if (tabBtn) switchTab(tabBtn.dataset.tabBtn);
-});
-
 document.getElementById('dateTag').textContent = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 checkSetup();
 renderAll();
-
 </script>
 </body>
 </html>
